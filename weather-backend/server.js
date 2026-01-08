@@ -5,14 +5,10 @@ const cors = require('cors');
 
 const app = express();
 
-// --- UPDATED CORS CONFIGURATION ---
-// This allows both your specific Vercel URL and your local computer to access the API.
+// --- FIXED CORS CONFIGURATION ---
+// Using '*' allows all domains (Vercel, Localhost, etc.) to access your data
 app.use(cors({
-  origin: [
-    "https://sl-weather-intelligence-i6cj0zfd7-shanis-projects-261f0e57.vercel.app",
-    "http://localhost:3000",
-    "http://localhost:5173" // In case you use Vite locally
-  ],
+  origin: '*', 
   methods: ["GET", "POST", "OPTIONS"],
   credentials: true
 }));
@@ -28,7 +24,7 @@ mongoose.connect(process.env.MONGO_URI)
 const ReadingSchema = new mongoose.Schema({}, { strict: false, collection: 'kalgunaya1' });
 const Reading = mongoose.model('Reading', ReadingSchema);
 
-// API: Welcome Route (Helps check if the server is live)
+// API: Welcome Route
 app.get('/', (req, res) => {
     res.send("🚀 Weather API is running! Access data at /api/profiles/latest");
 });
