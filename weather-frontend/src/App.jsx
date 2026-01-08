@@ -4,7 +4,8 @@ import Sidebar from './components/Sidebar';
 import MapView from './components/MapView';
 import SensorChart from './components/SensorChart';
 
-const API_BASE_URL = "http://localhost:5000/api";
+// UPDATED: Now points to your live Koyeb backend
+const API_BASE_URL = "https://deliberate-ginny-nadeeshani-71eaf45d.koyeb.app/api";
 
 function App() {
   const [profiles, setProfiles] = useState([]);
@@ -62,7 +63,7 @@ function App() {
   return (
     <div className="flex flex-col h-screen w-screen overflow-hidden bg-gray-50 font-sans">
       
-      {/* --- NEW DASHBOARD HEADER --- */}
+      {/* --- DASHBOARD HEADER --- */}
       <header className="h-16 bg-slate-900 border-b border-slate-700 flex items-center justify-between px-6 shadow-xl z-20">
         <div className="flex items-center gap-4">
           <div className="bg-blue-600 p-2 rounded-lg">

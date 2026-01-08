@@ -1,16 +1,30 @@
-# React + Vite
+# 🌦️ SL Weather Intelligence Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional weather monitoring system that shows live data from stations across Sri Lanka. Built using the MERN stack (MongoDB, Express, React, Node.js).
 
-Currently, two official plugins are available:
+## ✨ Key Features
+- **Live Map**: Interactive map showing station locations.
+- **Data Charts**: Visualizes temperature and humidity trends.
+- **Sorted Sidebar**: Easy navigation between different weather stations.
+- **Fast Backend**: Optimized API to handle weather sensor data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- **Frontend**: React.js, Tailwind CSS, Leaflet (Maps), Recharts.
+- **Backend**: Node.js, Express.js.
+- **Database**: MongoDB Atlas.
 
-## React Compiler
+## 🚀 How to Run Locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Backend
+1. Go to `/backend` folder.
+2. Run `npm install`.
+3. Create a `.env` file and add your `MONGO_URI`.
+4. Run `node server.js`.
 
-## Expanding the ESLint configuration
+### 2. Frontend
+1. Go to `/frontend` folder.
+2. Run `npm install`.
+3. Run `npm run dev`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔒 Security
+This project uses environment variables (`.env`) to keep database credentials safe.
